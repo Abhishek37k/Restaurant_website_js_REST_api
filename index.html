@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            crossorigin="anonymous">
+
+    </head>
+    <body
+        class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+        <header class="text-center py-3">
+            <h1>Restaurant Page</h1>
+        </header>
+        <section class="d-flex align-items-center justify-content-center mt-4"
+            style="min-width: 500px;">
+            <form id="my-form" class="p-4 border rounded"
+                style="min-width: 500px;">
+                <h2 class="mb-3">Add Items</h2>
+
+                <div id="msg" class="mb-3"
+                    style="color: red;font-weight: bold;"></div>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label">Selling Price:</label>
+                    <input type="number" id="price" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Product Name:</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Table no:</label>
+                    <select id="category" name="category" class="form-select">
+                        <option value selected disabled>Choose the
+                            table</option>
+                        <option value="table1">Table 1</option>
+                        <option value="table2">Table 1</option>
+                        <option value="table3">Table 3</option>
+                    </select>
+                </div>
+
+                <input id="btn" class="btn btn-success" type="submit"
+                    value="Add Product">
+
+                <div id="table1" class="category-container  pt-3">
+                    <h4>Table 1</h4>
+                </div>
+                <div id="table2" class="category-container  pt-3">
+                    <h4>Table 2</h4>
+                </div>
+                <div id="table3" class="category-container  pt-3">
+                    <h4>Table 3</h4>
+                </div>
+
+            </form>
+        </section>
+
+        <script src="index.js"></script>
+        <!-- adding axios funtionality -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+    </body>
+</html>
